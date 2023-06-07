@@ -1,4 +1,4 @@
-import { Flex, Heading, Spacer, IconButton, useColorModeValue, useColorMode, Link } from "@chakra-ui/react"
+import { Flex, Heading, Spacer, IconButton, useColorModeValue, useColorMode, Link, Box, Text } from "@chakra-ui/react"
 import {FaMoon, FaSun} from 'react-icons/fa'
 import NextLink from 'next/link'
 
@@ -13,8 +13,11 @@ export default function Header() {
       <Link as={NextLink} href={'/'} mr={'30px'}>About me</Link>
       <Link as={NextLink} href={'/'} mr={'30px'}>Works</Link>
       <Spacer />
+      <Box>
+        <Text as='span' mr={'10px'}>Change theme</Text>
       <IconButton icon={colorModeIcon} onClick={toggleColorMode}>   
       </IconButton>
+      </Box>
     </Flex>
     )
 }
