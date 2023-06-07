@@ -4,11 +4,11 @@ import theme from '../theme/theme'
 
 function App({ Component, pageProps, router }) {
   return (
+    <ChakraProvider theme={theme}>
     <Layout router={router}>
-      <ChakraProvider theme={theme}>
       <Component {...pageProps} key={router.route} />
-      </ChakraProvider>
     </Layout>
+    </ChakraProvider>
   );
 }
 

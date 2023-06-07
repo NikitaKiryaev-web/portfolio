@@ -6,24 +6,15 @@ const config = {
   useSystemColorMode: false,
 }
 
-// const styles = {
-//     global: props => ({
-//         body: {
-//             bg: mode('black', 'white')(props)
-//         }
-//     })
-// }
-
-const components = {
-    Button: {
-        baseStyle: props => ({
-            bg: mode('red, grey')(props),
-            color: mode('red', 'grey')(props)
-        })
-    }
+const styles = {
+    global: props => ({
+        body: {
+            bg: mode('white', 'black')(props)
+        }
+    })
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config, components })
+const theme = extendTheme({ config, styles })
 
 export default theme
