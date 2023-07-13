@@ -1,12 +1,15 @@
-import React from "react";
 import { Box } from "@chakra-ui/react";
-import Header from './Header'
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ children, router }) {
   return (
-    <Box as="main" p={['15px', null, null, '20px' ]}>
-      <Header/>
-      {children}
+    <Box minHeight={"100vh"} display={"flex"} flexDirection={"column"}>
+      <Header />
+      <Box flex={"1 0 auto"} as="main">
+        {children}
+      </Box>
+      <Footer />
     </Box>
   );
 }
